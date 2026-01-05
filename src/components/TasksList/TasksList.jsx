@@ -7,7 +7,7 @@ const dataTaskInitial = {
   text: 'Learning prop-types',
   days:4,
   isDone: true,
-};
+}
 
 
 function TasksList() {
@@ -22,8 +22,8 @@ function TasksList() {
     <>
     <Task dataTask={dataTask} setDoneTask={setDoneTask} />
     {
-        tasks.map((task)) => <Task key={task.id} dataTask={task} 
-        setDoneTask={setDataTask} />)
+        tasks.map((task) => <Task key={task.id} dataTask={task} 
+        setDoneTask={setDoneTask} />)
     }
     </>
   );
