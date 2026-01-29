@@ -6,7 +6,7 @@ const Task = (props) => {
     dataTask: { id , text, days, isDone },
     setDoneTask,
   } = props;
-  const setDone = () => setDoneTask(id);
+  const setDone = () => setDoneTask(id)
   return (
     <div className={styles.task}>
       <p style={{ color: isDone ? "green" : "red" }}>{text}</p>

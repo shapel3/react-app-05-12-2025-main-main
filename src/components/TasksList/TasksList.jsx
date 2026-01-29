@@ -7,13 +7,14 @@ import tasks from './data'
 
 function TasksList() {
   const [dataTasks, setDataTasks] = useState(tasks);
-  const setDoneTask =(id)=>{
-    const newTasks = dataTasks.map((task)=>{
+  const setDoneTask = (id) => {
+    const newTasks = dataTasks.map((task) => {
       if(task.id === id){
-        return({...task, isDone: true})
+        return{...task, isDone: true};
       }
+      return task;
     })
-   setDataTasks(newTasks)
+   setDataTasks(newTasks);
   };
   return (
     <>
