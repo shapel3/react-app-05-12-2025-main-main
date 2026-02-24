@@ -1,5 +1,5 @@
-import CursorTracker from "./components/CursorTracker/CursorTracker";
-import DragElement from "./components/DragElement/DragElement";
+import TextAreaAutoSave from "./components/TextAreaAutoSave/TextAreaAutoSave";
+
 
 
 function App() {
@@ -7,10 +7,7 @@ function App() {
   return (
     <>
       
-      <DragElement text='1' left={325} top={25} />
-      <DragElement text='2' left={125} top={125}/>
-      <DragElement text='3' left={225} top={225} />
-      <DragElement/>
+      <TextAreaAutoSave />
       
     </>
   );
