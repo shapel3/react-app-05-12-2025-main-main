@@ -1,4 +1,4 @@
-import TextAreaAutoSave from "./components/TextAreaAutoSave/TextAreaAutoSave";
+import TasksList from "./components/TasksList/TasksList";
 
 
 
@@ -6,9 +6,7 @@ function App() {
   
   return (
     <>
-      
-      <TextAreaAutoSave />
-      
+     <TasksList />
     </>
   );
 }
