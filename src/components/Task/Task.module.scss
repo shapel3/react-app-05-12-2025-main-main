@@ -1,7 +1,7 @@
 @use '/src/common/styles/colors' as *;
 @use '/src/common/styles/widths' as *;
 @use '/src/common/styles/mixins' as *;
-@use '/src/common/styles/hovers' as *;
+@use '/src/common/styles/inherits' as *;
 
 $indent: 10px;
 

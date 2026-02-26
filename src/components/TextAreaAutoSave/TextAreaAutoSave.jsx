@@ -6,12 +6,12 @@ const TextAreaAutoSave = () => {
     setText(event.target.value);
   };
 
-//   useEffect(() => {
-//     const saveText = localStorage.getItem("saveText");
-//     if (saveText) {
-//       setText(saveText);
-//     }
-//   }, []);
+  useEffect(() => {
+    const saveText = localStorage.getItem("saveText");
+    if (saveText) {
+      setText(saveText);
+    }
+  }, []);
 
   useEffect(() => {
     localStorage.setItem("saveText", text);
