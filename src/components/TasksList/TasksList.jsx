@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect , useRef } from "react";
 import Task from "../Task/Task";
-import tasks from './data'
+import tasks from './data';
 
 function TasksList() {
+  const isMounting = useRef(false);
   const [archiv, setArchiv] = useState([]);
   const [dataTasks, setDataTasks] = useState(tasks);
   const setDoneTask = (id) => {
@@ -19,11 +20,12 @@ function TasksList() {
    setArchiv(newArchiv)
   };
   useEffect(() => {
+    if(isMounting.current === false){
+      isMounting.current = true;
       const saveArchiv = JSON.parse(localStorage.getItem('archiv'));
-      setArchiv(saveArchiv)
-    
-    
-  }, [archiv.length]);
+      setArchiv(saveArchiv);
+    }
+  }, []);
   useEffect(() => {
    localStorage.setItem('archiv',  JSON.stringify(archiv))
   }, [archiv]);
